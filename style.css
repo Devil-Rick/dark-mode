@@ -1,0 +1,241 @@
+/*dark/light mode*/
+.dark{
+	--bg: #000;
+	--htext: #fff;
+	--ptext:blue;
+	--hover:#3a3458;
+	--toggler:linear-gradient(45deg, #c32020, #eac718);
+	--box-colour:#666b69;
+	--text-box:#f3dfdf;
+	--ac_name:#d6e2dd;
+	--border:black;
+}
+.light{
+	--bg: #fff;
+    --htext: black;  
+    --toggler: linear-gradient(45deg, #00139a, #cc02ff);
+    --ptext: grey;
+	--hover:#e0ddee;
+	--box-colour:#ecf5f2;
+	--text-box:#7d7575;
+	--ac_name:grey;
+	--border:#fff;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	font-family: 'inter',sans-serif;
+	background: var(--bg) !important;
+}
+
+
+
+/*Heading styles*/
+#title{
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.container-1{
+	width: 80%;
+}
+header section{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 30px;
+	margin-bottom: 40px;
+}
+#title .h-1{
+	font-weight: 700;
+	font-size: 32px;
+	color: var(--htext);
+}
+#title .h-2{
+	font-weight: 700;
+	font-size: 16px;
+	color: var(--ptext);
+}
+
+
+
+/*toggler styling*/
+#title .h_toggler{
+	align-items: center;
+	display: flex;
+	color: var(--htext);
+	justify-content: space-between;
+}
+.toggler{
+	width: 45px;
+	min-width: 45px;
+	height: 24px;
+	margin-left: 10px;
+	background: yellow;
+	cursor: pointer;
+	border-radius: 20px;
+	background-image: var(--toggler)
+}
+
+.toggler-circle{
+	margin:2px 2px;
+	width: 20px;
+	height: 20px;
+	border-radius: 20px;
+	background: var(--bg);
+	transition: 0.3s;
+
+}
+
+
+
+/*F_Dashboard style*/
+#F_Dashboards{
+	padding: 40px;
+    text-align: center;
+}
+#F_Dashboards .box{
+	background: var(--box-colour);
+    width: 100%;
+    border-radius: 5px;
+    margin: 10px auto;
+}
+.facebook{
+	width: 100%;
+	height: 5px;
+	border-top: 3px solid #2649f3;
+}
+.fa-facebook-square{
+	color: #003ba7;
+}
+.fa-twitter{
+	color: #0095ff;
+}
+.fa-instagram{
+	color:#ff3b00;
+}
+.fa-youtube{
+	color: #ef0808;
+}
+.twitter{
+	width: 100%;
+	height: 5px;
+	border-top: 3px solid #00a1ff;
+}
+
+.instagram{
+	width: 100%;
+	height: 5px;
+	background-image: linear-gradient(to right, #f48f36,#ff0000);
+}
+.youtube{
+	width: 100%;
+	height: 5px;
+	border-top: 3px solid #d22626;
+}
+.ac_name{
+    font-weight: bold;
+    font-size: 12px;
+    color: var(--ac_name);
+    padding-top: 10px;
+}
+#F_Dashboards .T_num{
+	font-weight: bolder;
+    font-size: 60px;
+}
+.fab{
+	margin-right: 6px;
+}
+#F_Dashboards .Inc_num{
+	color: #00d200;
+    font-weight: bold;
+    font-size: 11px;
+    padding-bottom: 10px;
+}
+#F_Dashboards .Dec_num{
+    font-weight: bold;
+    color: #fb1717;
+    font-size: 11px;
+    padding-bottom: 10px;
+}
+.text{
+    color: var(--text-box);
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+
+
+/*P_overview styles*/
+#P_Overview{
+	padding: 40px;
+}
+.card-body{
+	padding: 0;
+}
+.main-heading{
+	font-size: 30px;
+    font-weight: 700;
+}
+#P_Overview .card{
+	background: var(--box-colour);
+    width: 90%;
+    border-radius: 5px;
+    margin: 10px auto;
+   	border: 7px solid var(--border);
+}
+.p_head{
+	font-weight: bold;
+	font-size: 14px;
+}
+.icon{
+	position: absolute;
+    right: 20px;
+    top: 3px;
+}
+#P_Overview .dec{
+    font-weight: bold;
+    color: #fb1717;
+    font-size: 15px;
+    position: absolute;
+    right: 20px;
+    bottom: 13px;
+}
+.value{
+	font-weight: bold;
+	font-size: 30px;
+}
+
+.Inc{
+	color: #00d200;
+    font-weight: bold;
+    font-size: 15px;
+    position: absolute;
+    right: 20px;
+    bottom: 13px;	
+}
+
+
+/*responsive design starts*/
+
+@media only screen and (max-width: 500px){
+	/*heading styles*/
+	#title .h-1{
+	font-size: 24px;
+	}
+	#title .h-2{
+	font-size: 12px;
+	}
+
+	/*F_dashboard mobile*/
+	#F_Dashboards {
+    padding: 0 40px;
+    text-align: center;
+	}
+}
